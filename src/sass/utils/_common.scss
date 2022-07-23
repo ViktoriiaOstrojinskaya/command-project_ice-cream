@@ -6,6 +6,18 @@ body {
   font-size: 14px;
   color: $text-color;
   background-color: $white;
+
+  @media screen and (min-width: 320px) {
+    padding-top: 58px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 82px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 87px;
+  }
 }
 
 h1,
