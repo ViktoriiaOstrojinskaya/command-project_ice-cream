@@ -1,1 +1,79 @@
 // Маргарита
+.footer {
+    background-color: $bg-light;
+}
+.footer-title {
+    padding-top: 40px;
+    padding-right: 66px;
+    font-family: $brand-font;
+font-weight: 400;
+font-size: 18px;
+line-height: 1.16;
+text-transform: uppercase;
+
+color: $brand-accent;
+}
+
+.footer-second-title {
+    margin-top: 16px;
+    padding-right: 100px;
+    font-family: $brand-font;
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 1.14;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+
+color: $brand-color;
+}
+
+.footer-list {
+    display: flex;
+    gap: 28px;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: flex-end;
+}
+.footer-list__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $social-bg-color;
+}
+.footer-list__link {
+    color: $white;
+}
+
+.footer-soc-icon {
+    fill: currentColor;
+}
+
+.footer-text {
+    margin-top: 40px;
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 1.83;
+text-align: right;
+}
+
+.footer-tel {
+    color: $brand-color;
+}
+.footer-copy {
+    border-top: 1px solid $quote-line-color;
+    margin-top: 40px;
+}
+
+.footer-copy__item {
+font-style: normal;
+font-weight: 700;
+line-height: 1.5;
+
+text-align: center;
+color: $subtext-color;
+}
