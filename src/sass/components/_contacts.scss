@@ -1,1 +1,24 @@
 // Алевтина
+.location{
+    background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 26.5%,
+    rgba(255, 245, 246, 1) 26.5%
+  );
+}
+
+.location__title{
+    visibility: hidden;
+}
+
+.location__list{
+    margin-bottom: 32px;
+    list-style: none;
+}
+
+.location__item {
+    padding: 40px 32px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background-color: $white;
+}
