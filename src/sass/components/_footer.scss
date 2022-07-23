@@ -2,30 +2,46 @@
 .footer {
     background-color: $bg-light;
 }
+
+.footer-wrap {
+    @include tablet {
+        display: flex;
+        margin-bottom: 48px;
+        justify-content: space-between;
+    }
+}
+.footer-online {
+    @include tablet {
+        text-align: center;
+    }
+}
 .footer-title {
     padding-top: 40px;
     padding-right: 66px;
     font-family: $brand-font;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.16;
+    width: 232px;
+    @include font(400, 18px, 1.16, null);
 text-transform: uppercase;
-
 color: $brand-accent;
+
+@include tablet {
+    @include font(null, 26px, 1.14, 00.06em);
+    width: 340px;
+}
 }
 
 .footer-second-title {
     margin-top: 16px;
     padding-right: 100px;
     font-family: $brand-font;
-font-style: normal;
-font-weight: 400;
-font-size: 34px;
-line-height: 1.14;
-letter-spacing: 0.04em;
+    width: 200px;
+    @include font(400, 34px, 1.15, 0.04em);
 text-transform: uppercase;
-
 color: $brand-color;
+
+@include tablet {
+    @include font(null, 48px, 1.14, 0.06em);
+}
 }
 
 .footer-list {
@@ -34,6 +50,9 @@ color: $brand-color;
     margin-top: 40px;
     text-align: center;
     justify-content: flex-end;
+    @include tablet {
+        margin-top: 100px;
+    }
 }
 .footer-list__item {
     display: flex;
@@ -54,26 +73,47 @@ color: $brand-color;
 
 .footer-text {
     margin-top: 40px;
-font-style: normal;
-font-weight: 700;
-font-size: 12px;
-line-height: 1.83;
+    margin-bottom: 56px;
+    @include font(700, 12px, 1.83, null);
 text-align: right;
+
+@include tablet {
+    @include font(null, 14px, 1.85, null);
+}
 }
 
 .footer-tel {
     color: $brand-color;
 }
+.footer-copy::before{
+    content: '';
+position: absolute;
+    bottom: 61px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $quote-line-color;
+    @include tablet {
+    bottom: 37px;
+    }
+}
 .footer-copy {
-    border-top: 1px solid $quote-line-color;
-    margin-top: 40px;
+    position: relative;
+    padding-bottom: 3px;
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4px;
+        }
 }
 
 .footer-copy__item {
-font-style: normal;
-font-weight: 700;
-line-height: 1.5;
-
+    @include font(700, null, 1.5, null);
 text-align: center;
 color: $subtext-color;
+
+@include tablet {
+    @include font(null, null, 1.85, null);
+letter-spacing: 0.02em;
+}
 }
