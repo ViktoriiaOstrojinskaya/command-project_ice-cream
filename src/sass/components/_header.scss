@@ -1,1 +1,167 @@
 // Сергей
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding-top: 8px;
+
+  background-color: $bg-color;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link {
+  display: block;
+}
+.header__logo {
+  display: block;
+}
+
+.nav__btn {
+  display: block;
+
+  position: absolute;
+  top: 19px;
+  right: 20px;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  & .icon__cross {
+    display: none;
+  }
+
+  &.is-open .icon__cross {
+    display: block;
+  }
+
+  &.is-open .icon__menu {
+    display: none;
+  }
+}
+
+.nav__icon {
+  display: block;
+}
+
+.menu {
+  z-index: 1;
+  @media screen and (min-width: 320px) {
+    display: none;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+
+    background-color: #e17992;
+    drop-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  //   @media screen and (min-width: 768px) {
+  //     display: flex;
+  //     width: 100%;
+  //     justify-content: space-between;
+  //   }
+}
+
+.btn__buy {
+  display: block;
+  width: calc(100% - 40px);
+  max-width: 280px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+
+  background: $white;
+  border: none;
+  border-radius: 22px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  color: $brand-color;
+}
+
+.btn__icon {
+  margin-left: 14px;
+}
+
+/* Site-nav */
+
+// .nav__list {
+//   display: block;
+
+//   //   @media screen and (min-width: 768px) {
+//   //     display: flex;
+//   //     align-items: center;
+//   //   }
+// }
+
+.nav__item {
+  @media screen and (min-width: 320px) {
+    display: flex;
+    border-top: 1px solid #e18298;
+    padding-left: 20px;
+    height: 42px;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 1px solid #e18298;
+    }
+  }
+  //   @media screen and (min-width: 320px) {
+  //     &:not(:last-child) {
+  //       margin-bottom: 32px;
+  //     }
+  //   }
+
+  //   @media screen and (min-width: 768px) {
+  //     &:not(:first-child) {
+  //       margin-left: 50px;
+  //     }
+  //   }
+}
+
+.nav__link {
+  @media screen and (min-width: 320px) {
+    //  @include font(500, 14px, 1.14, 0.02em);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+
+    color: $white;
+
+    transition: color $transition;
+  }
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+
+  &--current {
+    color: $brand-color;
+  }
+}
