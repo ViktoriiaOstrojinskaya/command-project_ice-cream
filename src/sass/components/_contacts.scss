@@ -3,8 +3,7 @@
     background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 26.5%,
-    rgba(255, 245, 246, 1) 26.5%
-  );
+    rgba(255, 245, 246, 1) 26.5%);
 }
 
 .location__title{
@@ -20,4 +19,112 @@
     padding: 40px 32px;
     flex-shrink: 0;
     background-color: $white;
+    border-radius: 24px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+}
+
+.location__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.location__point {
+    display: inline;
+    align-items: center;
+    padding: 0px 24px;
+    background: $bg-cafe;
+    border-radius: 4px;
+    text-align: center;
+    color: $white;
+    @include font(500, 12px, 1.83, 0.04em);  
+}
+
+.location__LosAgneles{
+    background: $bg-green;
+}
+
+.location__city {
+    @include font(500, 12px, 1.83, 0.04em);
+    font-style: normal;
+    color: $text-color;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font: $main-font;
+}
+
+.location__text{
+    @include font(500, 12px, 1.5, 0.04em);
+    font-style: normal;
+    color: $subtext-color;
+    margin-top: 24px;
+    font: $main-font;
+}
+
+.location__schedule::before{
+    content: '';
+    margin-bottom: 24px;
+    display: flex;
+    width: 100%;
+    border: 1px solid $quote-line-color;
+    margin-top: 24px;
+}
+
+.location__schedule::after {
+    content: '';
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    border: 1px solid $quote-line-color;
+}
+
+.location__working-mode {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    color: $text-color;
+}
+
+.location__working-hours{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    margin-bottom: 8px;
+    color: $brand-accent;
+}
+
+.location__contacts-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $subtext-color;
+    transition: color 250ms cubic-bezier(0.77, 0, 0.175, 1);
+    &:hover,
+    &:focus{
+        color: $brand-color;
+    }
+}
+
+// .location__button{
+
+// }
+
+.location__button-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.location__button-loc{
+    background-color: $alternate-accent-color;
+    color: $white;
+    width: 161px;
+    height: 44px;
+    border-radius: 22px;
+    border: 0;
+    @include font(700, 16px, 1.31, 0.02em);
+    transition-property: background-color;
 }
