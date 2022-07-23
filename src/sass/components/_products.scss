@@ -54,11 +54,11 @@
     position: absolute;
     width: 100%;
     height: auto;
-    background-image: ('../images/products/icecream1x-mobile.png');
+    background-image: url(../images/products/icecream1x-mobile.png);
   }
 
   @media screen and (min-width: 768px) {
-    width: (100% - 32) / 3;
+    width: calc((100% - 32px) / 3);
   }
 }
 
@@ -70,6 +70,7 @@
 }
 
 .menu__header {
+  position: relative;
   font-family: $brand-font;
   font-weight: 400;
   font-size: 20px;
@@ -81,7 +82,20 @@
   color: $white;
 
   margin-bottom: 70px;
+
+  &::after {
+    content: '...';
+    position: absolute;
+    width: 26px;
+    height: 6px;
+    top: 42;
+    left: 37.5%;
+    font-size: 25px;
+    line-height: 1.15;
+    letter-spacing: 0.1em;
+  }
 }
+
 .menu__text {
   font-weight: 700;
   font-size: 14px;
@@ -95,6 +109,8 @@
   margin-bottom: 32px;
 }
 .menu__btn {
+  display: flex;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
