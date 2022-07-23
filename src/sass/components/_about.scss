@@ -1,1 +1,87 @@
 // Наталия
+
+//mobile
+
+.about {
+    background-color: $bg-light;
+    background-image: url(../images/about/spilledmilk1x-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 50% 83%;
+    background-size: contain;
+    // max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .about {
+        background-image: url(../images/about/spilledmilk2x-mobile.png);
+    }
+    }
+
+.about__label {
+    color: $brand-accent;
+    font-family: $brand-font;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.about__titel {
+    color: $brand-color;
+    font-family: $brand-font;
+    font-size: 34px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.about__img {
+    margin-bottom: 40px;
+}
+.about__text {
+    font-size: 12px;
+    line-height: 1.62;
+    
+}
+.about__text:not(:last-child) {
+    margin-bottom: 24px;
+}
+.about__text--color {
+    color: $subtext-color;
+}
+.about__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: inherit;
+
+    padding: 10px 40px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+    border-radius: 22px;
+    border: none;
+
+    color: $brand-color;
+    background-color: $white;
+
+    transition: background-color $transition ;
+}
+
+.about__button {
+    &:hover, &:focus {
+        background-color: $hover-bg-color;
+    }
+}
+.about__icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    fill: currentColor;
+}
