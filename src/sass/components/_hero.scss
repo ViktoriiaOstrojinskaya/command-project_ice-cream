@@ -1,1 +1,91 @@
 // Марина
+.hero {
+  background-color: $bg-color;
+  padding-top: 40px;
+}
+.hero_title {
+  position: relative;
+  font-family: $brand-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white;
+}
+.hero_word {
+}
+
+.hero_text {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 150%;
+  /* or 12px */
+
+  color: $white;
+  
+}
+.hero_button-title {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $brand-color;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: $white;
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $brand-color;
+  }
+}
+.hero_products-button {
+  width: 62.4px;
+  height: 2.6;
+  left: 32px;
+  top: 202px;
+  background: $brand-color;
+  border-radius: 20px;
+}
+.hero_made-button {
+  width: 82.8px;
+  height: 0.28;
+  left: 102.4px;
+  top: 202px;
+  background: $brand-color;
+  border-radius: 20px;
+}
+.hero_button-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  
+  margin-top: 20px;
+  margin-bottom: 158px;
+}
+.hero_milk {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.hero_girl { 
+  @media screen and (max-width: 767px) {
+  display: none;
+}
+
+}
+.hero-features {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
