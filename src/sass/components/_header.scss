@@ -1,11 +1,10 @@
 // Сергей
 .header {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
-
-  padding-top: 8px;
 
   background-color: $bg-color;
 }
@@ -14,13 +13,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding-top: 8px;
 }
 
 .header__link {
   display: block;
-}
-.header__logo {
-  display: block;
+  background-color: transparent;
 }
 
 .nav__btn {
@@ -49,12 +48,8 @@
   }
 }
 
-.nav__icon {
-  display: block;
-}
-
 .header__menu {
-  z-index: 1;
+  z-index: 2;
   @media screen and (min-width: 320px) {
     display: none;
     position: absolute;
@@ -74,49 +69,37 @@
       flex-direction: column;
     }
   }
-
-  //   @media screen and (min-width: 768px) {
-  //     display: flex;
-  //     width: 100%;
-  //     justify-content: space-between;
-  //   }
 }
 
 .btn__buy {
-  display: block;
-  width: calc(100% - 40px);
-  max-width: 280px;
-  height: 44px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background: $white;
+  @media screen and (min-width: 320px) {
+    width: calc(100% - 40px);
+    max-width: 280px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 19px;
+  }
+
   border: none;
   border-radius: 22px;
-  padding: 0;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
   color: $brand-color;
+  background: $white;
+
+  @include font(700, 16px, 1.31, 0.04em);
 }
 
 .btn__icon {
+  display: inline-block;
   margin-left: 14px;
+  margin-right: 0;
 }
 
 /* Site-nav */
-
-// .nav__list {
-//   display: block;
-
-//   //   @media screen and (min-width: 768px) {
-//   //     display: flex;
-//   //     align-items: center;
-//   //   }
-// }
 
 .nav__item {
   @media screen and (min-width: 320px) {
@@ -130,26 +113,11 @@
       border-bottom: 1px solid #e18298;
     }
   }
-  //   @media screen and (min-width: 320px) {
-  //     &:not(:last-child) {
-  //       margin-bottom: 32px;
-  //     }
-  //   }
-
-  //   @media screen and (min-width: 768px) {
-  //     &:not(:first-child) {
-  //       margin-left: 50px;
-  //     }
-  //   }
 }
 
 .nav__link {
   @media screen and (min-width: 320px) {
-    //  @include font(500, 14px, 1.14, 0.02em);
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.28;
+    @include font(700, 14px, 1.28, 0.04em);
 
     color: $white;
 
