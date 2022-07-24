@@ -1,4 +1,16 @@
 // Виктория
+.customer .container {
+  @include tablet {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  
+  @include desktop {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -10,13 +22,19 @@
 }
 
 .swiper-slide__pic {
-  margin-bottom: 32px;
-}
+  display: block;
+  margin: 0 auto;
 
-// .swiper-wrapper {
-//     align-items: center;
-//     justify-items: center;
-//   }
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+  
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
 
 .swiper-pagination {
   width: 12px;
@@ -30,21 +48,34 @@
   position: relative;
   margin-right: 0;
   width: 100%;
-  height: 308px;
-  background: #FAFAFA;
+  max-height: 308px;
+  background: repeating-linear-gradient(#E1E1E1, #E1E1E1 1px, #FAFAFA 2px, #FAFAFA 31px);
+
+  @include tablet {
+    height: 164px;
+  }
+  
+  @include desktop {
+    height: 138px;
+  }
 }
 
 .customer-article__item {
-padding-top: 43px;
-padding-left: 65px;
-padding-right: 53px;
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 2.55;
-text-align: center;
-color: #000000;
+  padding: 43px 58px;
+  @include font(500, 12px, 2.55, null);
+  text-align: center;
+  color: $text-color;
+
+  @include tablet {
+    padding: 37px 55px;
+    @include font(500, 14px, 2.14, 0.04);
+  }
+
+  @include desktop {
+    padding: 47px 109px;
+    @include font(500, 16px, 1.88, 0.04);
+}
+
 
 &::before {
  content: "";
@@ -56,22 +87,21 @@ color: #000000;
  left: 53px;
  top: 30px;
 }
-
-
 }
 
-// .customer__icon {
-//   margin-bottom: 16px;
-// }
 
 .customer__location {
   margin-top: 16px;
   margin-bottom: 16px;
-  font-family: 'DM Sans';
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.86;
+  @include font(500, 14px, 1.66, null);
   text-align: center;
-  color: #000000;
+  color: $text-color;
 
+  @include tablet {
+    @include font(500, 16px, 1.88, null);
+  }
+  
+  @include desktop {
+    @include font(500, 20px, 1.85, null);
+  }
 }
