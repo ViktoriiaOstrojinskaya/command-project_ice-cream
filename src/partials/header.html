@@ -9,13 +9,18 @@
 
     <!-- Menu -->
     <div class="header__menu" id="menu" data-menu>
-      <button class="btn__buy" type="button" data-open-modal>
+      <!-- Modal button -->
+      <button
+        class="modal__btn modal__btn--menu"
+        type="button"
+        aria-expanded="false"
+        data-open-modal
+      >
         Buy now
         <svg class="btn__icon" width="10" height="10">
           <use href="./images/icons.svg#icon-right"></use>
         </svg>
       </button>
-
       <!-- Navigation -->
       <nav class="nav">
         <ul class="nav__list list">
@@ -32,15 +37,16 @@
             <a href="#products" class="nav__link">Our products</a>
           </li>
           <li class="nav__item">
-            <a href="#contacts" class="nav__link">Contacts</a>
+            <a href="#contacts" class="nav__link">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
 
+    <!-- Menu button -->
     <button
-      type="button"
       class="nav__btn"
+      type="button"
       aria-expanded="false"
       aria-controls="menu"
       data-menu-button
@@ -53,6 +59,20 @@
       >
         <use class="icon__menu" href="./images/icons.svg#icon-burger"></use>
         <use class="icon__cross" href="./images/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+
+    <!-- Modal button -->
+    <button
+      class="modal__btn"
+      type="button"
+      aria-expanded="false"
+      data-open-modal
+      data-button
+    >
+      Buy now
+      <svg class="btn__icon" width="10" height="10">
+        <use href="./images/icons.svg#icon-right"></use>
       </svg>
     </button>
   </div>

@@ -6,15 +6,28 @@
   left: 0;
   width: 100%;
 
-  background-color: $bg-color;
+  background-color: transparent;
 }
 
 .header__container {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
 
   padding-top: 8px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 37px;
+    padding-left: 16px;
+    padding-right: 32px;
+  }
 }
 
 .header__link {
@@ -22,13 +35,149 @@
   background-color: transparent;
 }
 
+.header__menu {
+  z-index: 2;
+
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    height: 44px;
+    opacity: 0;
+    transform: translateX(100%);
+
+    transition: (opacity $transition), (box-shadow $transition),
+      (translate $transition);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    height: 44px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: (opacity $transition), (box-shadow $transition),
+      (translate $transition);
+  }
+
+  @media screen and (min-width: 1200px) {
+    // position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    opacity: 1;
+  }
+
+  &.is-open {
+    position: absolute;
+
+    @media screen and (min-width: 320px) {
+      width: 100%;
+      padding-top: 60px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      max-width: 254px;
+      padding-top: 58px;
+    }
+
+    @media screen and (max-width: 1199.98px) {
+      display: flex;
+      top: 0;
+      right: 0;
+
+      height: 100vh;
+      flex-direction: column;
+
+      opacity: 1;
+
+      background-color: #e17992;
+      box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
+
+      transform: translateX(0%);
+
+      transition: (opacity $transition), (box-shadow $transition),
+        (translate $transition);
+    }
+  }
+}
+
+.modal__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  height: 44px;
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    width: 160px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 160px;
+  }
+
+  border: none;
+  border-radius: 22px;
+  color: $brand-color;
+  background-color: $white;
+
+  @include font(700, 16px, 1.31, 0.04em);
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg-color;
+  }
+
+  &--menu {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 320px) {
+      display: flex;
+      width: calc(100% - 40px);
+      max-width: 280px;
+      margin-bottom: 19px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: calc(100% - 64px);
+      margin-bottom: 33px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.btn__icon {
+  display: inline-block;
+  margin-left: 14px;
+  margin-right: 0;
+  fill: $brand-color;
+}
+
+/* Site-nav */
 .nav__btn {
   display: block;
   z-index: 4;
 
-  position: absolute;
-  top: 19px;
-  right: 20px;
+  @media screen and (max-width: 767.98px) {
+    position: absolute;
+    top: 21px;
+    right: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    margin-right: 32px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    opacity: 0;
+  }
 
   padding: 0;
   border: none;
@@ -36,16 +185,32 @@
 
   cursor: pointer;
 
+  &.is-open {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      position: absolute;
+      top: 20px;
+      right: 32px;
+      margin: 0;
+    }
+  }
+
   & .icon__cross {
-    display: none;
+    // display: none;
+    opacity: 0;
   }
 
   &.is-open .icon__cross {
     display: block;
+    opacity: 1;
+
+    transition: opacity $transition;
   }
 
   &.is-open .icon__menu {
-    display: none;
+    // display: none;
+    opacity: 0;
+
+    transition: opacity $transition;
   }
 }
 
@@ -57,81 +222,46 @@
   fill: $white;
 }
 
-.header__menu {
-  z-index: 2;
-  @media screen and (min-width: 320px) {
-    display: none;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100vh;
-    padding-top: 60px;
-
-    background-color: #e17992;
-    box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
-
-    &.is-open {
-      display: flex;
-      flex-direction: column;
-    }
+.nav__list {
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
-
-.btn__buy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media screen and (min-width: 320px) {
-    width: calc(100% - 40px);
-    max-width: 280px;
-    height: 44px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 19px;
-  }
-
-  border: none;
-  border-radius: 22px;
-  color: $brand-color;
-  background: $white;
-
-  @include font(700, 16px, 1.31, 0.04em);
-}
-
-.btn__icon {
-  display: inline-block;
-  margin-left: 14px;
-  margin-right: 0;
-  fill: $brand-color;
-}
-
-/* Site-nav */
 
 .nav__item {
-  @media screen and (min-width: 320px) {
-    display: flex;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 1199.98px) {
     border-top: 1px solid #e18298;
     padding-left: 20px;
     height: 42px;
-    align-items: center;
 
     &:last-child {
       border-bottom: 1px solid #e18298;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    &:not(:last-child) {
+      margin-right: 38px;
+    }
+  }
 }
 
 .nav__link {
+  display: block;
+  color: $white;
+
+  transition: color $transition;
+
   @media screen and (min-width: 320px) {
     @include font(700, 14px, 1.28, 0.04em);
+  }
 
-    color: $white;
-
-    transition: color $transition;
+  @media screen and (min-width: 1200px) {
+    @include font(700, 16px, 1.31, 0.04em);
   }
 
   &:hover,
