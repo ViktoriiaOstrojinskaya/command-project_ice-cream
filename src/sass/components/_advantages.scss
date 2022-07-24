@@ -8,7 +8,9 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $brand-color;
-margin-top: 16px;}
+margin-top: 16px;
+
+}
 .advantages-text {font-weight: 700;
     font-size: 12px;
     line-height: 1.67;
@@ -22,7 +24,17 @@ max-width: 230px;}
     display: inline-block;
     height: 50px;
     background-position: center;
-    background-repeat: no-repeat;}  
+    background-repeat: no-repeat;
+    animation: rotateY 3000ms infinite alternate backwards ease-in-out 1000ms;
+}  
+@keyframes rotateY {
+    0% {
+      transform: perspective(400px) rotateY(40deg);
+    }
+  
+    100% {
+      transform: perspective(400px) rotateY(-40deg);
+    }}
 .milk::before {
     width: 35px;
     background-image: url(/src/images/advantages/milk1x.png);}
@@ -32,12 +44,12 @@ max-width: 230px;}
 .heart::before {
     width: 44px;
     background-image: url(/src/images/advantages/heart1x.png);}
-@include tablet {
+@include tablet {.advantages-list {justify-content: space-between;} 
 .advantages-heading {font-size: 48px;
     margin-top: 36px;} 
     .advantages-text {font-size: 14px;
         margin-top: 13px;
-    max-width: 180px;}  
+    max-width: 200px;}  
     .milk::before {
         max-width: 50px;}  
             }
