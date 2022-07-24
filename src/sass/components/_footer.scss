@@ -6,27 +6,35 @@
 .footer-wrap {
     @include tablet {
         display: flex;
-        margin-bottom: 48px;
         justify-content: space-between;
     }
-}
-.footer-online {
     @include tablet {
-        text-align: center;
+        align-items: center;
+        margin-bottom: 48px;
+        padding-top: 40px;
+    }
+    @include desktop {
+        margin-bottom: 67px;
+        padding-top: 121px;
     }
 }
+
 .footer-title {
     padding-top: 40px;
     padding-right: 66px;
     font-family: $brand-font;
-    width: 232px;
     @include font(400, 18px, 1.16, null);
 text-transform: uppercase;
 color: $brand-accent;
 
 @include tablet {
-    @include font(null, 26px, 1.14, 00.06em);
-    width: 340px;
+    @include font(null, 26px, 1.15, 0.04em);
+    padding-top: unset;
+}
+
+@include desktop {
+    @include font(null, 30px, 1.13, null);
+    padding-top: unset;
 }
 }
 
@@ -34,13 +42,16 @@ color: $brand-accent;
     margin-top: 16px;
     padding-right: 100px;
     font-family: $brand-font;
-    width: 200px;
     @include font(400, 34px, 1.15, 0.04em);
 text-transform: uppercase;
 color: $brand-color;
 
 @include tablet {
     @include font(null, 48px, 1.14, 0.06em);
+}
+
+@include desktop {
+    @include font(null, 58px, 1.13, null);
 }
 }
 
@@ -50,8 +61,8 @@ color: $brand-color;
     margin-top: 40px;
     text-align: center;
     justify-content: flex-end;
-    @include tablet {
-        margin-top: 100px;
+    @include desktop {
+        margin-top: unset;
     }
 }
 .footer-list__item {
@@ -79,6 +90,13 @@ text-align: right;
 
 @include tablet {
     @include font(null, 14px, 1.85, null);
+    width: 268px;
+    margin-bottom: unset;
+}
+
+@include desktop {
+    @include font(null, 16px, 1.87, 00.02em);
+    width: 319px;
 }
 }
 
@@ -97,6 +115,7 @@ position: absolute;
     bottom: 37px;
     }
 }
+
 .footer-copy {
     position: relative;
     padding-bottom: 3px;
@@ -113,7 +132,6 @@ text-align: center;
 color: $subtext-color;
 
 @include tablet {
-    @include font(null, null, 1.85, null);
-letter-spacing: 0.02em;
+    @include font(null, null, 1.85, 0.02em);
 }
 }
