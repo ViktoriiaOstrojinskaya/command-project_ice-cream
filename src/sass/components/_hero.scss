@@ -1,1 +1,62 @@
 // Марина
+.hero {
+  background-color: $bg-color;
+}
+
+.hero__container {
+  padding-top: 136px;
+  padding-bottom: 158px;
+}
+
+.hero__title {
+  display: block;
+  max-width: 218px;
+  margin-bottom: 20px;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  @include font(400, 26px, 1.15, 0.04em);
+
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+.hero__focus {
+  font-family: inherit;
+  @include font(400, 48px, 0.96, 0.04em);
+  text-transform: uppercase;
+
+  color: $brand-color;
+}
+
+.hero__list {
+  display: flex;
+
+  gap: 8px;
+}
+
+.hero__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 24px;
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+  @include font(400, 8px, 1.25, 0.04em);
+
+  &--product {
+    color: $white;
+    background-color: $brand-color;
+  }
+
+  &--made {
+    color: $brand-color;
+    background-color: $white;
+  }
+}
