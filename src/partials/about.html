@@ -23,7 +23,7 @@
         <p class="about__text about__text--color">
             Our ice cream is the healthiest!
         </p>
-        <button type="button" class="about__button">Read more
+        <button type="button" class="about__button" data-modal-open>Read more
             <svg class="about__icon">
                 <use href="./images/icons.svg#icon-right" ></use>
             </svg>
@@ -32,3 +32,28 @@
     </div>
     </div>
 </section>
+<!-------------Modal window---------------------->
+<div class="backdrop is-hidden" data-modal>
+    <div class="about-modal">
+        <button class="about-modal__btn" data-modal-close>
+            <svg class="about-modal__icon">
+                <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <div class="about-form">
+        <p class="about-modal__titel">
+            Manufacturing process
+        </p>
+        <ul class="about-modal__list">
+            <li class="about-modal__item">Fold and mix the mixture</li>
+            <li class="about-modal__item">Pasteurization of the mixture</li>
+            <li class="about-modal__item">Filtration</li>
+            <li class="about-modal__item">Homogenization of the mixture</li>
+            <li class="about-modal__item">Cooling and ripening (at least 4 hours)</li>
+            <li class="about-modal__item">Freezing - whipping and partial freezing</li>
+            <li class="about-modal__item">Tempering of ice cream at t -40℃</li>
+            <li class="about-modal__item">Ice cream packaging</li>
+        </ul>
+        </div>
+    </div>
+</div>
