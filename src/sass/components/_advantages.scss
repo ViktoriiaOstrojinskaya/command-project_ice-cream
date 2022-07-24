@@ -1,4 +1,5 @@
 // Татьяна
+
 .advantages {background-color: $bg-light;}
 .advantages-heading {font-family: $brand-font;
     font-weight: 400;
@@ -7,29 +8,47 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $brand-color;
-padding-top: 16px;}
+margin-top: 16px;}
 .advantages-text {font-weight: 700;
     font-size: 12px;
-    line-height: 20px;
-padding-top: 4px;
+    line-height: 1.67;
+margin-top: 4px;
 max-width: 230px;}
 .advantages-list {display: flex;
     flex-wrap: wrap;
     gap: 32px;
     width: 100%;}
-.milk::before {content: "";
+.advantages-item::before {content: ""; 
     display: inline-block;
-    width: 33px;
     height: 50px;
-background-image: url(/src/images/advantages/milk1x.png);}
-.apple::before {content: "";
-    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;}  
+.milk::before {
+    width: 35px;
+    background-image: url(/src/images/advantages/milk1x.png);}
+.apple::before {
     width: 50px;
-    height: 50px;
-background-image: url(/src/images/advantages/apple1x.png);}
-.heart::before {content: "";
-    display: inline-block;
+    background-image: url(/src/images/advantages/apple1x.png);}
+.heart::before {
     width: 44px;
-    height: 50px;
-background-image: url(/src/images/advantages/heart1x.png);}
-
+    background-image: url(/src/images/advantages/heart1x.png);}
+@include tablet {
+.advantages-heading {font-size: 48px;
+    margin-top: 36px;} 
+    .advantages-text {font-size: 14px;
+        margin-top: 13px;
+    max-width: 180px;}  
+    .milk::before {
+        max-width: 50px;}  
+            }
+@include desktop {
+    .advantages-list {justify-content: space-between;} 
+    .advantages-heading {font-size: 58px;
+        margin-top: 40px;} 
+    .advantages-text {font-size: 16px;
+            margin-top: 16px;
+        max-width: 288px;}  
+    .milk::before {
+        max-width: 50px;
+}
+}
