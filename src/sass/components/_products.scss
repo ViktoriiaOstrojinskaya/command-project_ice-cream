@@ -5,9 +5,7 @@
 
 .products__info {
   font-family: $brand-font;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.17;
+  @include font(400, 18px, 1.17, null);
   text-align: center;
   text-transform: uppercase;
 
@@ -27,11 +25,8 @@
 
 .products__header {
   font-family: $brand-font;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.15;
+  @include font(400, 34px, 1.15, 0.04em);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   color: $brand-color;
@@ -44,10 +39,8 @@
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 58px;
+    @include font(null, 58px, 1.14, 0.06em);
     margin-bottom: 281px;
-    line-height: 1.14;
-    letter-spacing: 0.06em;
   }
 }
 
@@ -191,11 +184,8 @@
 .menu__header {
   position: relative;
   font-family: $brand-font;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(400, 20px, 1.15, 0.04em);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   color: $white;
@@ -209,9 +199,7 @@
     height: 6px;
     top: 42;
     left: 37.5%;
-    font-size: 25px;
-    line-height: 1.15;
-    letter-spacing: 0.1em;
+    @include font(null, 25px, 1.15, 0.1em);
 
     @media screen and (min-width: 1200px) {
       top: 50;
@@ -219,18 +207,13 @@
   }
 
   @media screen and (min-width: 1200px) {
-    font-size: 30px;
-    line-height: 1.13;
-    letter-spacing: 0.04em;
+    @include font(null, 30px, 1.13, 0.04em);
   }
 }
 
 .menu__text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.5;
+  @include font(700, 14px, 1.5, 0.04em);
   text-align: center;
-  letter-spacing: 0.04em;
 
   @media screen and (min-width: 768px) {
     line-height: 1.8;
@@ -288,11 +271,8 @@
 
   &__heading {
     font-family: $brand-font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.15;
+    @include font(400, 16px, 1.15, 0.06em);
     text-align: center;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 20px;
 
@@ -310,10 +290,8 @@
   }
 
   &__item {
-    font-size: 14px;
-    line-height: 1.5;
+    @include font(null, 14px, 1.5, 0.04em);
     text-align: center;
-    letter-spacing: 0.04em;
 
     @media screen and (min-width: 768px) {
       font-size: 16px;
@@ -350,11 +328,8 @@
 
   &__heading {
     font-family: $brand-font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.15;
+    @include font(400, 16px, 1.15, 0.06em);
     text-align: center;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 20px;
 
@@ -372,10 +347,8 @@
   }
 
   &__item {
-    font-size: 14px;
-    line-height: 1.5;
+    @include font(null, 14px, 1.5, 0.04em);
     text-align: center;
-    letter-spacing: 0.04em;
 
     @media screen and (min-width: 768px) {
       font-size: 16px;
@@ -412,11 +385,8 @@
 
   &__heading {
     font-family: $brand-font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.15;
+    @include font(400, 16px, 1.15, 0.06em);
     text-align: center;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 20px;
 
@@ -434,10 +404,8 @@
   }
 
   &__item {
-    font-size: 14px;
-    line-height: 1.5;
+    @include font(null, 14px, 1.5, 0.04em);
     text-align: center;
-    letter-spacing: 0.04em;
 
     @media screen and (min-width: 768px) {
       font-size: 16px;
