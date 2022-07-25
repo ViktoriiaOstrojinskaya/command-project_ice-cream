@@ -65,7 +65,8 @@ color: $brand-color;
         margin-top: unset;
     }
 }
-.footer-list__item {
+
+.footer-list__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,9 +74,12 @@ color: $brand-color;
     height: 32px;
     border-radius: 50%;
     background-color: $social-bg-color;
-}
-.footer-list__link {
     color: $white;
+    &:hover,
+    &:focus {
+        background-color: $brand-color;
+    }
+    transition:  background-color  300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-icon {
@@ -95,7 +99,7 @@ text-align: right;
 }
 
 @include desktop {
-    @include font(null, 16px, 1.87, 00.02em);
+    @include font(null, 16px, 1.87, 0.02em);
     width: 319px;
 }
 }
