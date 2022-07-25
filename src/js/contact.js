@@ -1,13 +1,29 @@
-(() => {
+// (() => {
+//     const refs = {
+//       openMenuBtn: document.querySelector('[data-modal-open]'),
+//       closeMenuBtn: document.querySelector('[data-modal-close]'),
+//       menu: document.querySelector('[data-modal]'),
+//     };
+//     refs.openMenuBtn.addEventListener('click', toggleModal);
+//     refs.closeMenuBtn.addEventListener('click', toggleModal);
+//     function toggleModal() {
+//       refs.menu.classList.toggle('is-hidden');
+//     }
+//   })();
+
+  (() => {
     const refs = {
-      openMenuBtn: document.querySelector('[data-modal-open]'),
-      closeMenuBtn: document.querySelector('[data-modal-close]'),
-      menu: document.querySelector('[data-modal]'),
+      openMenuBtn: document.querySelector('.contacts-btn__location'),
+      closeMenuBtn: document.querySelector('.map__btn'),
+      menu: document.querySelector('.contacts__map'),
     };
-    refs.openMenuBtn.addEventListener('click', toggleModal);
-    refs.closeMenuBtn.addEventListener('click', toggleModal);
-    function toggleModal() {
+  
+    refs.openMenuBtn.addEventListener('click', toggleMenu);
+    refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  
+    function toggleMenu() {
       refs.menu.classList.toggle('is-hidden');
+      document.body.classList.toggle('map-open');
     }
   })();
 
