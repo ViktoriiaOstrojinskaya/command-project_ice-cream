@@ -4,6 +4,7 @@
 }
 
 .hero__container {
+  // BG-Images for mobile markup
   @media screen and (max-width: 767.98px) {
     padding-top: 136px;
     padding-bottom: 158px;
@@ -20,6 +21,8 @@
         url(/src/images/hero/ellipse2x-mobile.png);
     }
   }
+
+  // BG-Images for tablet markup
 
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     overflow: visible;
@@ -54,6 +57,42 @@
         url(/src/images/hero/ellipse2x-tablet.png);
     }
   }
+
+  // BG-Images for desktop markup
+
+  @media screen and (min-width: 1200px) {
+    overflow: visible;
+    padding-top: 60px;
+    padding-bottom: 84px;
+    position: relative;
+
+    background-image: url(/src/images/hero/dote1x-desktop.png),
+      url(/src/images/hero/dote1x-desktop.png),
+      url(/src/images/hero/girl1x-desktop.png),
+      url(/src/images/hero/milk1x-desktop.png),
+      url(/src/images/hero/ice-cream1x-desktop.png),
+      url(/src/images/hero/ellipse1x-desktop.png);
+
+    background-size: 30px 30px, 30px 30px, 304px 241px, 213px 216px, 236px 557px,
+      534px 534px;
+
+    background-repeat: no-repeat;
+
+    background-position: right 19px bottom 482px, right 19px bottom 390px,
+      right 29px bottom 0px, left 16px bottom 60px, right 348px bottom 0px,
+      right 172px bottom 76px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero/dote2x-desktop.png),
+        url(/src/images/hero/dote2x-desktop.png),
+        url(/src/images/hero/girl2x-desktop.png),
+        url(/src/images/hero/milk2x-desktop.png),
+        url(/src/images/hero/ice-cream2x-desktop.png),
+        url(/src/images/hero/ellipse2x-desktop.png);
+    }
+  }
 }
 
 .hero__title {
@@ -66,6 +105,13 @@
 
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     @include font(400, 22px, 1.14, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 277px;
+    margin-bottom: 24px;
+
+    @include font(400, 38px, 1.16, 0.04em);
   }
 
   text-transform: uppercase;
@@ -81,6 +127,9 @@
     @include font(400, 34px, 0.91, 0.04em);
   }
 
+  @media screen and (min-width: 1200px) {
+    @include font(400, 58px, 0.91, 0.04em);
+  }
   text-transform: inherit;
 
   color: $brand-color;
@@ -131,18 +180,30 @@
     margin-top: 61px;
     margin-left: 164px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 108px;
+    margin-left: 220px;
+  }
 }
 
 .hero__text {
+  display: block;
+  flex-wrap: wrap;
+  color: $white;
+
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-    display: inline-block;
-    flex-wrap: wrap;
     max-width: 114px;
     margin-bottom: 7px;
 
     @include font(400, 8px, 1.5, 0.04em);
+  }
 
-    color: $white;
+  @media screen and (min-width: 1200px) {
+    max-width: 200px;
+    margin-bottom: 20px;
+
+    @include font(400, 14px, 1.4, 0.04em);
   }
 }
 
@@ -155,20 +216,26 @@
 
     width: 18px;
     height: 18px;
-    border-radius: 50%;
-    border: none;
-    background-color: $white;
+  }
 
-    &:active {
-      box-shadow: 0px 3px 1px rgba(114, 8, 47, 0.12),
-        0px 1px 2px rgba(120, 5, 45, 0.12), 0px 2px 2px rgba(157, 25, 54, 0.12);
-    }
+  @media screen and (min-width: 1200px) {
+    width: 26px;
+    height: 26px;
+  }
 
-    &--icon {
-      margin-left: auto;
-      margin-right: auto;
-      fill: $brand-color;
-    }
+  border-radius: 50%;
+  border: none;
+  background-color: $white;
+
+  &:active {
+    box-shadow: 0px 3px 1px rgba(114, 8, 47, 0.12),
+      0px 1px 2px rgba(120, 5, 45, 0.12), 0px 2px 2px rgba(157, 25, 54, 0.12);
+  }
+
+  &--icon {
+    margin-left: auto;
+    margin-right: auto;
+    fill: $brand-color;
   }
 }
 
@@ -177,18 +244,32 @@
     display: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  @media screen and (min-width: 768px) {
     position: absolute;
     display: block;
+    padding-top: 3px;
+    padding-right: 9px;
+  }
 
-    &--cafes {
-      @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-        width: 43px;
-        height: 44px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 7px;
+    padding-right: 18px;
+  }
 
-        bottom: 280px;
-        right: 32px;
-      }
+  &--cafes {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: 43px;
+      height: 44px;
+
+      bottom: 280px;
+      right: 32px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 72px;
+      height: 77px;
+
+      bottom: 435px;
+      right: 19px;
     }
   }
 
@@ -200,36 +281,49 @@
       bottom: 221px;
       right: 32px;
 
-      text-align: center;
+      text-align: end;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 93px;
+      height: 76px;
+
+      bottom: 344px;
+      right: 19px;
     }
   }
 }
 
 .hero__subtitle {
+  display: block;
+
+  text-align: end;
+
+  font-family: 'Titan One';
+
+  color: $brand-color;
+
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-    display: block;
-
-    justify-content: center;
-    font-family: 'Titan One';
     @include font(400, 28px, 1.14, 0.04em);
-    color: $brand-color;
+  }
 
-    &--trucks {
-      padding-left: 6px;
-    }
+  @media screen and (min-width: 1200px) {
+    @include font(400, 46px, 1.15, 0.04em);
   }
 }
 
 .features__text {
-  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-    display: block;
-    text-align: center;
-    font-family: 'DM Sans';
-    @include font(400, 8px, 1.25, 0.04em);
-    color: $white;
+  display: block;
+  text-align: center;
+  font-family: 'DM Sans';
+  color: $white;
+  text-align: end;
 
-    &--trucks {
-      text-align: start;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(400, 8px, 1.25, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 14px, 1.29, null);
   }
 }
