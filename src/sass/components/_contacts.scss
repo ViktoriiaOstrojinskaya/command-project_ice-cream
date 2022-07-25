@@ -285,6 +285,11 @@
     fill: $white;
 }
 
+.btn-accent-flicker {
+    position: relative;
+    overflow: hidden;
+}
+
 .location__button-fran{
     display: flex;
     justify-content: center;
@@ -328,14 +333,14 @@ svg{
     }
 }
 
-.backdrop-location {
+.backdrop__location {
     position: fixed;
     width: 100%;
     height: 100%;  
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    z-index: 100;
     transition-property: visibility, opacity;
     transition-duration: 250ms;
 }
@@ -353,11 +358,11 @@ svg{
 
 }
 
-.backdrop-location.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
+// .backdrop-location.is-hidden {
+//     visibility: hidden;
+//     opacity: 0;
+//     pointer-events: none;
+// }
 
 // .modal-location__iframe {
 //     width: 100%;
