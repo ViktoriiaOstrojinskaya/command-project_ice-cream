@@ -4,7 +4,7 @@
     padding-left: 74px;
     padding-right: 74px;
   }
-  
+
   @include desktop {
     padding-left: 116px;
     padding-right: 116px;
@@ -12,9 +12,9 @@
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
+}
 
 .swiper-slide {
   height: auto;
@@ -28,55 +28,55 @@
   @include tablet {
     margin-bottom: 20px;
   }
-  
+
   @include desktop {
     margin-bottom: 16px;
   }
 }
 
 .customer-article {
-  position: relative;
   width: 100%;
   background: $quote-bg-color;
   padding: 43px 50px 17px 50px;
-  
+
   @include tablet {
     padding: 20px 6px;
   }
-  
+
   @include desktop {
     padding: 32px 74px 31px 74px;
-  }  
+  }
 }
 
 .customer-article__text {
   @include font(500, 12px, 2.58, null);
   text-align: center;
   color: $text-color;
-  background: repeating-linear-gradient(to bottom, $quote-bg-color 0px, $quote-bg-color 30px, $quote-line-color 30px, $quote-line-color 31px);
+  background: repeating-linear-gradient(
+    to bottom,
+    $quote-bg-color 0px,
+    $quote-bg-color 30px,
+    $quote-line-color 30px,
+    $quote-line-color 31px
+  );
 
   @include tablet {
     width: 608px;
     @include font(500, 14px, 2.14, 0.04);
   }
-  
+
   @include desktop {
     width: 822px;
     @include font(500, 16px, 1.88, 0.04);
   }
 
   &::before {
-    content: "";
+    content: '';
     display: inline-block;
-    position: absolute;
-    background: url("/src/images/custom-services/quotes.svg") no-repeat;
+    background-image: url('/src/images/custom-services/quotes.svg');
     width: 54px;
     height: 40px;
-    
-
-    // left: 53px;
-    // top: 30px;
-   }
+  }
 }
 
 .customer-icon {
@@ -88,7 +88,7 @@
 
 .customer-icon__item {
   margin-right: 10px;
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -104,42 +104,41 @@
   @include tablet {
     @include font(500, 16px, 1.88, null);
   }
-  
+
   @include desktop {
     @include font(500, 20px, 1.85, null);
   }
 
   &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 32px;
-      height: 4px;
-      
-      top: -50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
+    content: '';
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 4px;
 
-      background: url("/src/images/custom-services/customer-ellipse.svg"), 
-      url("/src/images/custom-services/customer-ellipse.svg"),
-      url("/src/images/custom-services/customer-ellipse.svg");
-      background-repeat: no-repeat,
-      no-repeat,
-      no-repeat;
-      background-position: left, center, right;
-    }
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    background: url('/src/images/custom-services/customer-ellipse.svg'),
+      url('/src/images/custom-services/customer-ellipse.svg'),
+      url('/src/images/custom-services/customer-ellipse.svg');
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left, center, right;
+  }
 }
 
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 
 .swiper-pagination-bullet-active {
- content: "";
- background: url("/src/images/custom-services/icon-home.svg");
- width: 12.4px;
- height: 11.84px;
- border-radius: 0;
+  content: '';
+  background: url('/src/images/custom-services/icon-home.svg');
+  width: 12.4px;
+  height: 11.84px;
+  border-radius: 0;
 }
