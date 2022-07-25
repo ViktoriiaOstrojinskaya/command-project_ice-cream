@@ -1,0 +1,2 @@
+!function(){var e={openMenuBtn:document.querySelector(".contacts-btn__location"),closeMenuBtn:document.querySelector(".map__btn"),menu:document.querySelector(".contacts__map")};function n(){e.menu.classList.toggle("is-hidden"),document.body.classList.toggle("map-open")}e.openMenuBtn.addEventListener("click",n),e.closeMenuBtn.addEventListener("click",n)}();
+//# sourceMappingURL=index.bb747727.js.map
