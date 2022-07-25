@@ -25,6 +25,7 @@
     overflow: visible;
     padding-top: 20px;
     padding-bottom: 56px;
+    position: relative;
 
     background-image: url(/src/images/hero/dote1x-tablet.png),
       url(/src/images/hero/dote1x-tablet.png),
@@ -61,7 +62,6 @@
   margin-bottom: 20px;
 
   font-family: 'Titan One';
-  font-style: normal;
   @include font(400, 26px, 1.15, 0.04em);
 
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
@@ -114,6 +114,11 @@
   &--made {
     color: $brand-color;
     background-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-bg-color;
+    }
   }
 }
 
@@ -163,6 +168,68 @@
       margin-left: auto;
       margin-right: auto;
       fill: $brand-color;
+    }
+  }
+}
+
+.hero__features {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    position: absolute;
+    display: block;
+
+    &--cafes {
+      @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+        width: 43px;
+        height: 44px;
+
+        bottom: 280px;
+        right: 32px;
+      }
+    }
+  }
+
+  &--trucks {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: 53px;
+      height: 43px;
+
+      bottom: 221px;
+      right: 32px;
+
+      text-align: center;
+    }
+  }
+}
+
+.hero__subtitle {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: block;
+
+    justify-content: center;
+    font-family: 'Titan One';
+    @include font(400, 28px, 1.14, 0.04em);
+    color: $brand-color;
+
+    &--trucks {
+      padding-left: 6px;
+    }
+  }
+}
+
+.features__text {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: block;
+    text-align: center;
+    font-family: 'DM Sans';
+    @include font(400, 8px, 1.25, 0.04em);
+    color: $white;
+
+    &--trucks {
+      text-align: start;
     }
   }
 }
