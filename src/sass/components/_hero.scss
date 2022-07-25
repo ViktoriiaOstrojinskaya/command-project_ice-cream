@@ -6,6 +6,20 @@
 .hero__container {
   padding-top: 136px;
   padding-bottom: 158px;
+
+  @media screen and (max-width: 767.98px) {
+    background-image: url(/src/images/hero/ice-cream1x-mobile.png),
+      url(/src/images/hero/ellipse1x-mobile.png);
+    background-size: 171px 410px, 284px 344px;
+    background-repeat: no-repeat;
+    background-position: 117px 36px, 36px 25px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero/ice-cream2x-mobile.png),
+        url(/src/images/hero/ellipse2x-mobile.png);
+    }
+  }
 }
 
 .hero__title {
