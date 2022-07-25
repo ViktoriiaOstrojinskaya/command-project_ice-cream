@@ -1,4 +1,8 @@
 // Валерия
+.products {
+  padding-bottom: 60px;
+}
+
 .products__info {
   font-family: $brand-font;
   font-weight: 400;
@@ -10,7 +14,17 @@
   color: $brand-accent;
 
   padding-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 }
+
 .products__header {
   font-family: $brand-font;
   font-weight: 400;
@@ -23,7 +37,20 @@
   color: $brand-color;
 
   margin-bottom: 148px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    margin-bottom: 158px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    margin-bottom: 281px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
 }
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -32,9 +59,15 @@
     flex-wrap: nowrap;
     gap: 16px;
   }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
 }
 
 .menu__item {
+  position: relative;
+
   width: 100%;
   height: 489px;
 
@@ -58,6 +91,13 @@
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 32px) / 3);
+    height: 473px;
+    padding-top: 118px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 64px) / 3);
+    height: 535px;
+    padding-top: 165px;
   }
 }
 
@@ -79,6 +119,18 @@
     width: 280px;
     height: 280px;
     background-image: url('/src/images/products/icecream1x-mobile.png');
+    @media screen and (min-width: 768px) {
+      width: 224px;
+      height: 224px;
+      background-image: url('/src/images/products/icecream1x-tablet.png');
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 368px;
+      height: 394px;
+      top: -260;
+      background-image: url('/src/images/products/icecream1x-descktop.png');
+    }
   }
 }
 
@@ -103,6 +155,7 @@
     @media screen and (min-width: 1200px) {
       width: 368px;
       height: 394px;
+      top: -260;
       background-image: url('/src/images/products/icecoffee1x-descktop.png');
     }
   }
@@ -119,6 +172,19 @@
     width: 280px;
     height: 280px;
     background-image: url('/src/images/products/milkshake1x-mobile.png');
+
+    @media screen and (min-width: 768px) {
+      width: 224px;
+      height: 224px;
+      background-image: url('/src/images/products/milkshake1x-tablet.png');
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 368px;
+      height: 394px;
+      top: -260;
+      background-image: url('/src/images/products/milkshake1x-descktop.png');
+    }
   }
 }
 
@@ -146,6 +212,16 @@
     font-size: 25px;
     line-height: 1.15;
     letter-spacing: 0.1em;
+
+    @media screen and (min-width: 1200px) {
+      top: 50;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -155,6 +231,18 @@
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.04em;
+
+  @media screen and (min-width: 768px) {
+    line-height: 1.8;
+    max-width: 160px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 245px;
+    margin-bottom: 60px;
+  }
 
   color: $white;
 
@@ -169,8 +257,55 @@
   border-radius: 50%;
   border: none;
   background-color: $white;
+
+  &:active {
+    box-shadow: 0px 3px 1px rgba(114, 8, 47, 0.12),
+      0px 1px 2px rgba(120, 5, 45, 0.12), 0px 2px 2px rgba(157, 25, 54, 0.12);
+  }
 }
 
 .btn-icon {
   fill: $brand-color;
+}
+
+.extra-info {
+  position: absolute;
+  top: 253;
+  left: -2000;
+  width: 100%;
+  background-color: #eec68e;
+  border-radius: 24px;
+  padding: 20px;
+  color: $white;
+
+  &__heading {
+    font-family: $brand-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+
+  .menu__btn:active + &,
+  .menu__btn:focus + & {
+    left: 0;
+  }
 }
