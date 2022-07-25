@@ -1,7 +1,7 @@
 // Сергей
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -36,7 +36,7 @@
 }
 
 .header__menu {
-  z-index: 2;
+  z-index: 101;
 
   @media screen and (max-width: 767.98px) {
     display: flex;
@@ -162,7 +162,7 @@
 /* Site-nav */
 .nav__btn {
   display: block;
-  z-index: 4;
+  z-index: 102;
 
   @media screen and (max-width: 767.98px) {
     position: absolute;
