@@ -35,6 +35,7 @@
 }
 
 .customer-article {
+  position: relative;
   width: 100%;
   background: $quote-bg-color;
   padding: 43px 50px 17px 50px;
@@ -46,9 +47,28 @@
   @include desktop {
     padding: 32px 74px 31px 74px;
   }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 16px;
+    width: 32px;
+    height: 4px;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%);
+
+    background: url('/src/images/custom-services/customer-ellipse.svg'),
+      url('/src/images/custom-services/customer-ellipse.svg'),
+      url('/src/images/custom-services/customer-ellipse.svg');
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left, center, right;
+  }
 }
 
 .customer-article__text {
+  position: relative;
   @include font(500, 12px, 2.58, null);
   text-align: center;
   color: $text-color;
@@ -70,13 +90,15 @@
     @include font(500, 16px, 1.88, 0.04);
   }
 
-  &::before {
-    content: '';
-    display: inline-block;
-    background-image: url('/src/images/custom-services/quotes.svg');
-    width: 54px;
-    height: 40px;
-  }
+  // &::before {
+  //   content: '';
+  //   display: inline-block;
+  //   vertical-align: top;
+
+  //   background-image: url('/src/images/custom-services/quotes.svg');
+  //   width: 54px;
+  //   height: 40px;
+  // }
 }
 
 .customer-icon {
@@ -94,7 +116,6 @@
 }
 
 .customer__location {
-  position: relative;
   margin-top: 32px;
   margin-bottom: 16px;
   @include font(500, 14px, 1.66, null);
@@ -108,25 +129,10 @@
   @include desktop {
     @include font(500, 20px, 1.85, null);
   }
+}
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 32px;
-    height: 4px;
-
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-
-    background: url('/src/images/custom-services/customer-ellipse.svg'),
-      url('/src/images/custom-services/customer-ellipse.svg'),
-      url('/src/images/custom-services/customer-ellipse.svg');
-
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: left, center, right;
-  }
+.customer__location-item {
+  margin-top: 16px;
 }
 
 .swiper-pagination-bullet {
