@@ -1,16 +1,17 @@
 <!-- Марина -->
 <section class="hero" id="home">
-  <div class="hero__container container">
+  <div class="hero__container container" id="hero">
     <h1 class="hero__title">
-      ice cream made with <span class="hero__focus">passion</span>
+      ice cream made with
+      <span class="hero__focus">passion</span>
     </h1>
     <ul class="hero__list list">
-      <li class="hero__item">
+      <li class="hero__item" data-aos="zoom-in-right">
         <a href="#products" class="hero__link hero__link--product link"
           >Products</a
         >
       </li>
-      <li class="hero__item">
+      <li class="hero__item" data-aos="zoom-in-left">
         <a href="#made" class="hero__link hero__link--made link"
           >How it&apos;s made?</a
         >
@@ -22,7 +23,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
-      <button class="hero__btn" type="button">
+      <button class="hero__btn" type="button" aria-label="Feature">
         <svg class="hero__btn--icon" width="15" height="15">
           <use href="./images/icons.svg#icon-arrow"></use>
         </svg>
@@ -30,12 +31,16 @@
     </div>
 
     <div class="hero__features hero__features--cafes">
-      <p class="hero__subtitle hero__subtitle--cafes">16</p>
+      <p class="hero__subtitle hero__subtitle--cafes" data-aos="zoom-in-down">
+        16
+      </p>
       <span class="features__text features__text--cafes">cafes</span>
     </div>
 
     <div class="hero__features hero__features--trucks">
-      <p class="hero__subtitle hero__subtitle--trucks">23</p>
+      <p class="hero__subtitle hero__subtitle--trucks" data-aos="zoom-in-up">
+        23
+      </p>
       <span class="features__text features__text--trucks">food trucks</span>
     </div>
   </div>
