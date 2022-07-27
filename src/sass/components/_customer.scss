@@ -17,11 +17,13 @@
 }
 
 .swiper-slide {
+  position: relative;
   height: auto;
   padding-bottom: 20px;
 }
 
 .swiper-slide__pic {
+  border-radius: 44px;
   margin: 0 auto;
   margin-bottom: 32px;
 
@@ -41,11 +43,11 @@
   padding: 43px 50px 17px 50px;
 
   @include tablet {
-    padding: 20px 6px;
+    padding: 37px 6px 36px 6px;
   }
 
   @include desktop {
-    padding: 32px 74px 31px 74px;
+    padding: 46px 74px 31px 72px;
   }
   &::after {
     content: '';
@@ -72,33 +74,51 @@
   @include font(500, 12px, 2.58, null);
   text-align: center;
   color: $text-color;
-  background: repeating-linear-gradient(
-    to bottom,
-    $quote-bg-color 0px,
-    $quote-bg-color 30px,
-    $quote-line-color 30px,
-    $quote-line-color 31px
+
+  padding-left: 15px;
+  padding-right: 8px;
+  background-image: repeating-linear-gradient(
+    $quote-bg-color,
+    $quote-bg-color 29px,
+    $quote-line-color 29px,
+    $quote-line-color 30px
   );
 
   @include tablet {
-    width: 608px;
+    padding-left: 44.71px;
+    padding-right: 49.18px;
     @include font(500, 14px, 2.14, 0.04);
   }
 
   @include desktop {
-    width: 822px;
+    padding-left: 36px;
+    padding-right: 35px;
     @include font(500, 16px, 1.88, 0.04);
   }
 
-  // &::before {
-  //   content: '';
-  //   display: inline-block;
-  //   vertical-align: top;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
 
-  //   background-image: url('/src/images/custom-services/quotes.svg');
-  //   width: 54px;
-  //   height: 40px;
-  // }
+    background-image: url('/src/images/custom-services/quotes.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 54px;
+    height: 40px;
+
+    top: -13px;
+    left: 0px;
+
+    @include tablet {
+      width: 60.35px;
+    }
+
+    @include desktop {
+      width: 54px;
+    }
+  }
 }
 
 .customer-icon {
@@ -115,12 +135,13 @@
   }
 }
 
-.customer__location {
-  margin-top: 32px;
-  margin-bottom: 16px;
+.customer-article__location {
   @include font(500, 14px, 1.66, null);
   text-align: center;
   color: $text-color;
+
+  margin-top: 32px;
+  margin-bottom: 16px;
 
   @include tablet {
     @include font(500, 16px, 1.88, null);
@@ -129,10 +150,6 @@
   @include desktop {
     @include font(500, 20px, 1.85, null);
   }
-}
-
-.customer__location-item {
-  margin-top: 16px;
 }
 
 .swiper-pagination-bullet {
