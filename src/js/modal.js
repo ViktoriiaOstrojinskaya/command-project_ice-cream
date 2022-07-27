@@ -1,14 +1,25 @@
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector('[data-open-modal]'),
-//     closeModalBtn: document.querySelector('[data-close-modal]'),
-//     backdrop: document.querySelector('[data-backdrop]'),
-//     body: document.querySelector('body'),
-//   };
-//   refs.openModalBtn.addEventListener('click', toggleModal);
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-//   function toggleModal() {
-//     refs.backdrop.classList.toggle('is-hidden');
-//     refs.body.classList.toggle('no-scroll');
-//   }
-// })();
+(() => {
+  // Function Autopadding for body.
+  const { height: headerHeight } = document
+    .querySelector('.header')
+    .getBoundingClientRect();
+
+  document.body.style.paddingTop = `${headerHeight}px`;
+  document.getElementById('hero').style.marginTop = `-${headerHeight}px`;
+
+  //   Transparent header function
+
+  let headerOffset = document.querySelector('.header').offsetHeight;
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    console.log(headerOffset, currentScrollPos);
+
+    if (headerOffset != currentScrollPos) {
+      document.getElementById('header').style.backgroundColor = '#ffb8ca';
+    } else {
+      document.getElementById('header').style.backgroundColor = 'transparent';
+    }
+    currentScrollPos = headerOffset;
+  };
+})();

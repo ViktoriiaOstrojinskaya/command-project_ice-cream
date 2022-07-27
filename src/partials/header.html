@@ -1,5 +1,5 @@
 <!-- Сергей -->
-<header class="header">
+<header class="header" id="header">
   <div class="header__container container">
     <a class="header__link" href="./index.html">
       <svg class="header__logo" width="199" height="50">
@@ -14,6 +14,7 @@
         class="modal__btn modal__btn--menu"
         type="button"
         aria-expanded="false"
+        aria-label="Button buy now"
         data-open-modal
       >
         Buy now
@@ -49,14 +50,10 @@
       type="button"
       aria-expanded="false"
       aria-controls="menu"
+      aria-label="mobile menu toggle button"
       data-menu-button
     >
-      <svg
-        class="nav__icon"
-        width="20"
-        height="20"
-        aria-label="Переключатель мобильного меню"
-      >
+      <svg class="nav__icon" width="20" height="20">
         <use class="icon__menu" href="./images/icons.svg#icon-burger"></use>
         <use class="icon__cross" href="./images/icons.svg#icon-cross"></use>
       </svg>
@@ -68,7 +65,7 @@
       type="button"
       aria-expanded="false"
       data-open-modal
-      data-button
+      aria-label="Button buy now"
     >
       Buy now
       <svg class="btn__icon" width="10" height="10">
