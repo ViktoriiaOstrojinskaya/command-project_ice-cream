@@ -15,10 +15,10 @@
     var currentScrollPos = window.pageYOffset;
     console.log(headerOffset, currentScrollPos);
 
-    if (headerOffset != currentScrollPos) {
-      document.getElementById('header').style.backgroundColor = '#ffb8ca';
-    } else {
+    if (headerOffset === currentScrollPos || currentScrollPos === 0) {
       document.getElementById('header').style.backgroundColor = 'transparent';
+    } else {
+      document.getElementById('header').style.backgroundColor = '#ffb8ca';
     }
     currentScrollPos = headerOffset;
   };
