@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".header").getBoundingClientRect().height;document.body.style.paddingTop="".concat(e,"px"),document.getElementById("hero").style.marginTop="-".concat(e,"px");var o=document.querySelector(".header").offsetHeight;window.onscroll=function(){var e=window.pageYOffset;console.log(o,e),document.getElementById("header").style.backgroundColor=o===e||0===e?"transparent":"#ffb8ca",e=o}}();
+//# sourceMappingURL=index.a2c5cf0a.js.map
