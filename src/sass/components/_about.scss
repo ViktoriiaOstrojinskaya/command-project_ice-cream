@@ -218,13 +218,7 @@
     transition: transform $transition;
 }
 
-// @media screen and (min-device-pixel-ratio: 2),
-//     screen and (min-resolution: 192dpi),
-//     screen and (min-resolution: 2dppx) {
-//     .about {
-//         background-image: url(../images/about/spilledmilk2x-mobile.png);
-//     }
-//     };
+
 
 @media screen and (max-width: 1199px) {
     .about-modal {
